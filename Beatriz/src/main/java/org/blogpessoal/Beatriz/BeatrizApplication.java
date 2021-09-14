@@ -9,5 +9,4 @@ public class BeatrizApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BeatrizApplication.class, args);
 	}
-
 }

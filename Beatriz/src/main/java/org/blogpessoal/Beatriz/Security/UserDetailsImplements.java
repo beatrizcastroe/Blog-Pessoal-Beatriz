@@ -7,19 +7,21 @@ import org.blogpessoal.Beatriz.Model.Usuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-
 public class UserDetailsImplements implements UserDetails {
 	
-private static final long serialVersionUID = 1L;
+	/**
+	 * Coloca um Serial para a classe por conta do UserDetails
+	 */
+	private static final long serialVersionUID = 1L; 
 	
 	private String email;
 	private String senha;
+	
 	private List<GrantedAuthority> autorizacoes;
 	
-	
-	public UserDetailsImplements (Usuario user) {
-		this.email = user.getEmail ();
-		this.senha = user.getSenha ();
+	public UserDetailsImplements(Usuario usuario) {
+		this.email = usuario.getEmail();
+		this.senha = usuario.getSenha();
 	}
 	
 	@Override
